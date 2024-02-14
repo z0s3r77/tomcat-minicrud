@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>crudsession</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>sLogin</servlet-name>
+		<servlet-class>controller.ServletLogin</servlet-class>
+	</servlet>
+
+<servlet>
+    <servlet-name>UserManagementServlet</servlet-name>
+    <servlet-class>controller.ServletUserManagement</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UserManagementServlet</servlet-name>
+    <url-pattern>/UserManagement</url-pattern>
+</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>sLogin</servlet-name>
+		<url-pattern>/sLogin</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
